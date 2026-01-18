@@ -15,7 +15,7 @@ Quick start
 
 2. In another terminal, start the proxy pointing to the mock:
 
-   UPSTREAM_URL=http://localhost:19530 ./target/debug/milvus-auth-gateway
+   UPSTREAM_URL=http://localhost:19530 ./target/debug/milvus-jwt-proxy
 
 3. Send a test request:
 

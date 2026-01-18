@@ -27,12 +27,11 @@ fi
 
 echo ""
 echo "Mock upstream is ready."
-echo "To test:"
-echo "1. In another terminal, start the proxy: UPSTREAM_URL=http://localhost:19530 ./target/debug/milvus-auth-gateway"
-echo "2. Send a test request: curl -X GET 'http://localhost:8000/' -H 'Authorization: \$(echo -n \"x-jwt-token:TESTTOKEN\" | base64)'"
-echo "3. Check the proxy logs and upstream response for 'Bearer TESTTOKEN'"
+echo "Send a test request:"
+echo ""
+echo "curl -X GET 'http://localhost:8000/' -H \"Authorization: \$(echo -n x-jwt-token:TESTTOKEN | base64)\""
 echo ""
 
-# Start milvus-auth-gateway
+# Start milvus-jwt-proxy
 echo "Building proxy binary..."
 cargo run

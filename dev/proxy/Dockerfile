@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 RUN cargo build --release
 
 FROM debian:bookworm-slim
-COPY --from=builder /workspace/target/release/milvus-auth-gateway /usr/local/bin/milvus-auth-gateway
+COPY --from=builder /workspace/target/release/milvus-jwt-proxy /usr/local/bin/milvus-jwt-proxy
 EXPOSE 8000
-ENTRYPOINT ["/usr/local/bin/milvus-auth-gateway"]
+ENTRYPOINT ["/usr/local/bin/milvus-jwt-proxy"]

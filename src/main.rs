@@ -13,7 +13,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         .finish();
     tracing::subscriber::set_global_default(subscriber)?;
 
-    info!("Starting Milvus Auth Gateway...");
+    info!("Starting Milvus JWT Proxy...");
 
     // Load configuration
     let config = config::Config::from_env();
