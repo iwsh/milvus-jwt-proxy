@@ -1,11 +1,9 @@
-version: '3.8'
-
 services:
   mock-upstream:
     build: ./mock-upstream
     ports:
       - "19530:19530"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:19530/health"]
+      test: ["CMD-SHELL", "curl -f http://localhost:19530/health || exit 1"]
       interval: 5s
       retries: 5

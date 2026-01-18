@@ -29,8 +29,6 @@ impl AuthTransformer {
             }
         };
 
-        warn!("Decoded authorization header: {}", &decoded);
-
         // Expected format: x-jwt-token:${JWT}
         if let Some(jwt) = decoded.strip_prefix("x-jwt-token:") {
             format!("Bearer {}", jwt)
