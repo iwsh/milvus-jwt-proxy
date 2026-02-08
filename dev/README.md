@@ -55,17 +55,16 @@ cd repo_root
 This will:
 1. Start a minimal Milvus standalone instance with Docker Compose (including etcd and MinIO)
 2. Build and start the milvus-jwt-proxy
-3. Run Python tests that connect through the proxy to perform:
-   - Connection test with JWT token transformation
-   - Collection creation
-   - Data insertion
-   - Data querying
+3. Run connectivity tests that verify:
+   - Milvus is running and healthy
+   - Proxy is accepting connections
+   - HTTP request forwarding through the proxy
+   - Proxy is logging request activity
 4. Clean up all resources
 
 **Requirements:**
 - Docker with at least 4GB memory available
-- Python 3 with pip
-- pymilvus package (automatically installed if missing)
+- curl command-line tool
 
 **Notes:**
 - Initial startup takes 1-2 minutes for Milvus to initialize
