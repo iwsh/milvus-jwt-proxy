@@ -5,3 +5,8 @@ AGENTS.md
 CLINE.md
 .clinerules/
 .github/
+
+# Docker volumes
+etcd-data/
+minio-data/
+milvus-data/

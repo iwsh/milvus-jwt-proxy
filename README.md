@@ -80,6 +80,13 @@ UPSTREAM_URL=http://milvus-with-auth:19530
 
 Unit tests cover the header transformation behavior. See `src/auth.rs` for the transformation logic and tests.
 
+For integration testing with a real Milvus instance, see `dev/README.md` for instructions on running the connection test with Docker Compose.
+
+Quick test:
+```bash
+./dev/test-milvus-connection.sh
+```
+
 ## License
 
 This project is licensed under the Apache License, Version 2.0. See the `LICENSE` file for details.
